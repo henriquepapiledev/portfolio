@@ -3,3 +3,19 @@
 * {
   font-family: 'Manrope', sans-serif;
 }
+
+@theme {
+  /* color */
+  --color-grey: #808080;
+
+  /* background */
+  --color-grey-bg: #e7e7e7;
+}
+
+.App {
+  min-height: calc(100vh + 13rem);
+}
+
+.AppBody {
+  flex: 1;
+}
