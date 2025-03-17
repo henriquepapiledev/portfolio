@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="App flex flex-col">
       <Header />
-      <main className="AppBody">
+      <main className="AppBody flex-auto">
         <Home />
       </main>
       <Footer />

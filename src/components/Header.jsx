@@ -3,10 +3,10 @@ import logo from '../assets/logo.png';
 
 const Header = () => {
   return (
-    <header className="sticky top-0 z-50 border-t-4 border-black bg-white pt-8 pb-5">
+    <header className="fixed top-0 z-50 w-full bg-white border-t-4 border-black pt-8 pb-5">
       <div className="container mx-auto flex justify-between items-center pl-4 pr-4">
         <a href="/">
-          <img className="w-11 h-11" src={logo} alt="Henrique Papile" />
+          <img className="w-10 h-10" src={logo} alt="Henrique Papile" />
         </a>
         <nav role="navigation" aria-label="Menu de navegação">
           <ul className="flex gap-2.5">
