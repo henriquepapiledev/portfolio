@@ -1,12 +1,12 @@
 import React from 'react';
-import logo from '../assets/logo.png';
+import Logo from './Logo/Logo';
 
 const Header = () => {
   return (
     <header className="fixed top-0 z-50 w-full bg-white border-t-4 border-black pt-8 pb-5">
       <div className="container mx-auto flex justify-between items-center pl-4 pr-4">
         <a href="/">
-          <img className="w-10 h-10" src={logo} alt="Henrique Papile" />
+          <Logo />
         </a>
         <nav role="navigation" aria-label="Menu de navegação">
           <ul className="flex gap-2.5">
