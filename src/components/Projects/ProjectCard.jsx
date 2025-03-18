@@ -1,5 +1,3 @@
-import styles from '../../components/HoverLink.module.css';
-
 const ProjectCard = ({ id, title, description, image, url, categories }) => {
   return (
     <div className="grid grid-cols-2 gap-10">
@@ -24,7 +22,7 @@ const ProjectCard = ({ id, title, description, image, url, categories }) => {
         <h3 className="font-extrabold text-xl text-black mb-2">{title}</h3>
         <p className="font-light text-base/6 text-grey">{description}</p>
         <a
-          className={`${styles.link} inline-block font-bold text-base text-black mt-4`}
+          className="link inline-block font-bold text-base text-black mt-4"
           href={url}
           target="_blank"
         >

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../components/HoverLink.module.css';
 import Logo from './Logo/Logo';
 
 const Header = () => {
@@ -13,7 +12,7 @@ const Header = () => {
           <ul className="flex items-center gap-2.5">
             <li className="flex">
               <a
-                className={`${styles.link} font-light text-base text-black p-2`}
+                className="link font-light text-base text-black p-2"
                 href="#home"
               >
                 home
@@ -21,7 +20,7 @@ const Header = () => {
             </li>
             <li className="flex">
               <a
-                className={`${styles.link} font-light text-base text-black p-2`}
+                className="link font-light text-base text-black p-2"
                 href="#sobre"
               >
                 sobre mim
@@ -29,7 +28,7 @@ const Header = () => {
             </li>
             <li className="flex">
               <a
-                className={`${styles.link} font-light text-base text-black p-2`}
+                className="link font-light text-base text-black p-2"
                 href="#cases"
               >
                 cases
@@ -37,7 +36,7 @@ const Header = () => {
             </li>
             <li className="flex">
               <a
-                className={`${styles.link} font-light text-base text-black p-2`}
+                className="link font-light text-base text-black p-2"
                 href="#projetos"
               >
                 projetos
@@ -45,7 +44,7 @@ const Header = () => {
             </li>
             <li className="flex">
               <a
-                className={`${styles.link} font-light text-base text-black p-2`}
+                className="link font-light text-base text-black p-2"
                 href="#contato"
               >
                 contato
