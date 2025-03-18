@@ -4,17 +4,9 @@ import LinkedIn from '../assets/icon-linkedin.svg?react';
 import GitHub from '../assets/icon-github.svg?react';
 import Email from '../assets/icon-email.svg?react';
 import Whatsapp from '../assets/icon-whatsapp.svg?react';
-import ProjectCard from '../components/Projects/ProjectCard';
-import data from '../data/projects';
-import { useEffect, useState } from 'react';
+import Projects from '../components/Projects/Projects';
 
 const Home = () => {
-  const [projects, setProjects] = useState('');
-
-  useEffect(() => {
-    setProjects(data);
-  }, [data]);
-
   return (
     <>
       <section className="h-screen border-b-[1.5px] border-grey-bg" id="home">
@@ -53,20 +45,7 @@ const Home = () => {
         <div className="container mx-auto flex flex-col pl-4 pr-4">
           <Title title="projetos pessoais" position="right" />
           <div className="grid grid-cols-2 gap-20 mt-20">
-            {projects &&
-              projects.map(
-                ({ id, title, description, image, url, category }) => (
-                  <ProjectCard
-                    key={id}
-                    id={id}
-                    title={title}
-                    description={description}
-                    image={image}
-                    url={url}
-                    categories={category}
-                  />
-                ),
-              )}
+            <Projects />
           </div>
         </div>
       </section>
