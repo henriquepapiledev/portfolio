@@ -5,7 +5,7 @@ import GitHub from '../assets/icon-github.svg?react';
 import Email from '../assets/icon-email.svg?react';
 import Whatsapp from '../assets/icon-whatsapp.svg?react';
 import ProjectCard from '../components/Projects/ProjectCard';
-import data from '../data/project';
+import data from '../data/projects';
 import { useEffect, useState } from 'react';
 
 const Home = () => {

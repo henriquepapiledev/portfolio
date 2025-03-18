@@ -4,7 +4,7 @@ const data = [
     title: 'Trisul',
     description:
       'Site desenvolvido utilizando uma combinação de tecnologias modernas, incluindo HTML, CSS, Angular e integração com várias APIs de terceiros.',
-    image: 'src/assets/projects/trisul.png',
+    image: 'src/assets/cases/trisul.png',
     url: 'https://trisul-sa.com.br',
     category: ['angular', 'javascript', 'css', 'html'],
   },
@@ -13,7 +13,7 @@ const data = [
     title: 'Vamos',
     description:
       'Site desenvolvido utilizando uma combinação de tecnologias modernas, incluindo HTML, CSS e Angular.',
-    image: 'src/assets/projects/vamos.png',
+    image: 'src/assets/cases/vamos.png',
     url: 'https://vamos.com.br',
     category: ['angular', 'javascript', 'css', 'html'],
   },
@@ -22,7 +22,7 @@ const data = [
     title: 'Pro Matre',
     description:
       'Site desenvolvido utilizando uma combinação de tecnologias modernas, incluindo HTML, CSS, JavaScript e Wordpress Gutenberg.',
-    image: 'src/assets/projects/promatre.png',
+    image: 'src/assets/cases/promatre.png',
     url: 'https://promatre.com.br',
     category: ['wordpress', 'javascript', 'css', 'html'],
   },
