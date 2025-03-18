@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../components/HoverLink.module.css';
 import Logo from './Logo/Logo';
 
 const Header = () => {
@@ -9,33 +10,42 @@ const Header = () => {
           <Logo />
         </a>
         <nav role="navigation" aria-label="Menu de navegação">
-          <ul className="flex gap-2.5">
-            <li>
-              <a className="font-light text-base text-black p-2" href="/">
+          <ul className="flex items-center gap-2.5">
+            <li className="flex">
+              <a
+                className={`${styles.link} font-light text-base text-black p-2`}
+                href="#home"
+              >
                 home
               </a>
             </li>
-            <li>
-              <a className="font-light text-base text-black p-2" href="#sobre">
+            <li className="flex">
+              <a
+                className={`${styles.link} font-light text-base text-black p-2`}
+                href="#sobre"
+              >
                 sobre mim
               </a>
             </li>
-            <li>
-              <a className="font-light text-base text-black p-2" href="#cases">
+            <li className="flex">
+              <a
+                className={`${styles.link} font-light text-base text-black p-2`}
+                href="#cases"
+              >
                 cases
               </a>
             </li>
-            <li>
+            <li className="flex">
               <a
-                className="font-light text-base text-black p-2"
+                className={`${styles.link} font-light text-base text-black p-2`}
                 href="#projetos"
               >
                 projetos
               </a>
             </li>
-            <li>
+            <li className="flex">
               <a
-                className="font-light text-base text-black p-2"
+                className={`${styles.link} font-light text-base text-black p-2`}
                 href="#contato"
               >
                 contato

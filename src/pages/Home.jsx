@@ -4,8 +4,17 @@ import LinkedIn from '../assets/icon-linkedin.svg?react';
 import GitHub from '../assets/icon-github.svg?react';
 import Email from '../assets/icon-email.svg?react';
 import Whatsapp from '../assets/icon-whatsapp.svg?react';
+import ProjectCard from '../components/Projects/ProjectCard';
+import data from '../data/project';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+  const [projects, setProjects] = useState('');
+
+  useEffect(() => {
+    setProjects(data);
+  }, [data]);
+
   return (
     <>
       <section className="h-screen border-b-[1.5px] border-grey-bg" id="home">
@@ -24,7 +33,7 @@ const Home = () => {
         id="sobre"
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
-          <Title title="Sobre mim" position="left" />
+          <Title title="sobre mim" position="left" />
         </div>
       </section>
 
@@ -33,7 +42,7 @@ const Home = () => {
         id="cases"
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
-          <Title title="Cases" position="left" />
+          <Title title="cases" position="left" />
         </div>
       </section>
 
@@ -42,13 +51,29 @@ const Home = () => {
         id="projetos"
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
-          <Title title="Projetos pessoais" position="right" />
+          <Title title="projetos pessoais" position="right" />
+          <div className="grid grid-cols-2 gap-20 mt-20">
+            {projects &&
+              projects.map(
+                ({ id, title, description, image, url, category }) => (
+                  <ProjectCard
+                    key={id}
+                    id={id}
+                    title={title}
+                    description={description}
+                    image={image}
+                    url={url}
+                    categories={category}
+                  />
+                ),
+              )}
+          </div>
         </div>
       </section>
 
       <section className="pt-40 pb-40" id="contato">
         <div className="container mx-auto flex flex-col pl-4 pr-4">
-          <Title title="Contato" position="center" />
+          <Title title="contato" position="center" />
           <div className="flex justify-center items-center gap-20 mt-16">
             <SocialMediaLogo
               href="https://www.linkedin.com/in/henriquepapile/"
