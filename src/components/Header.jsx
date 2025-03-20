@@ -3,56 +3,58 @@ import Logo from './Logo/Logo';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-50 w-full bg-white border-t-4 border-black pt-8 pb-5">
-      <div className="container mx-auto flex justify-between items-center pl-4 pr-4">
+    <header className="container sticky left-0 right-0 top-0 z-50 mx-auto w-full p-4">
+      <nav
+        className="max-screen bg-white flex w-full items-center justify-between px-4 py-2 gap-6 rounded-md"
+        role="navigation"
+        aria-label="Menu de navegação"
+      >
         <a href="/">
           <Logo />
         </a>
-        <nav role="navigation" aria-label="Menu de navegação">
-          <ul className="flex items-center gap-2.5">
-            <li className="flex">
-              <a
-                className="link font-light text-base text-black p-2"
-                href="#home"
-              >
-                home
-              </a>
-            </li>
-            <li className="flex">
-              <a
-                className="link font-light text-base text-black p-2"
-                href="#sobre"
-              >
-                sobre mim
-              </a>
-            </li>
-            <li className="flex">
-              <a
-                className="link font-light text-base text-black p-2"
-                href="#cases"
-              >
-                cases
-              </a>
-            </li>
-            <li className="flex">
-              <a
-                className="link font-light text-base text-black p-2"
-                href="#projetos"
-              >
-                projetos
-              </a>
-            </li>
-            <li className="flex">
-              <a
-                className="link font-light text-base text-black p-2"
-                href="#contato"
-              >
-                contato
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+        <ul className="flex items-center gap-2.5">
+          <li>
+            <a
+              className="block link font-light text-base text-black p-2 pb-0"
+              href="#home"
+            >
+              home
+            </a>
+          </li>
+          <li>
+            <a
+              className="block link font-light text-base text-black p-2 pb-0"
+              href="#sobre"
+            >
+              sobre mim
+            </a>
+          </li>
+          <li>
+            <a
+              className="block link font-light text-base text-black p-2 pb-0"
+              href="#cases"
+            >
+              cases
+            </a>
+          </li>
+          <li>
+            <a
+              className="block link font-light text-base text-black p-2 pb-0"
+              href="#projetos"
+            >
+              projetos
+            </a>
+          </li>
+          <li>
+            <a
+              className="block link font-light text-base text-black p-2 pb-0"
+              href="#contato"
+            >
+              contato
+            </a>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
