@@ -7,6 +7,7 @@ import image from '../assets/photo.png';
 import Title from '../components/Title/Title';
 import Projects from '../components/Projects/Projects';
 import AboutLinks from '../components/About/AboutLinks';
+import AboutList from '../components/About/AboutList';
 
 const Home = () => {
   return (
@@ -28,7 +29,7 @@ const Home = () => {
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
           <Title title="sobre mim" position="left" />
-          <div class="max-w-6xl mx-auto mt-20">
+          <div class="max-w-6xl mt-20">
             <div class="flex flex-col lg:flex-row items-center">
               <div class="flex justify-center flex-1 lg:basis-full">
                 <img
@@ -54,6 +55,39 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="grid lg:grid-cols-3 gap-12 mt-16">
+            <AboutList
+              title="Eu tive experiências com"
+              experiences={[
+                'Codando Angular',
+                'Codando C#',
+                'Pré-processadores CSS:  Sass, Less',
+                'Figma, Adobe XD',
+                'Git, GitHub, Bitbucket',
+              ]}
+            />
+            <AboutList
+              title="Eu tenho anos de experiência com"
+              experiences={[
+                'Codando HTML5',
+                'Codando CSS',
+                'Codando JavaScript',
+                'Codando WordPress',
+                'Usando Elementor',
+                'Codando Umbraco',
+              ]}
+            />
+            <AboutList
+              title="Eu trabalho e estudo sobre"
+              experiences={[
+                'Estudando React',
+                'Estudando API RESTful',
+                'Estudando Node.js',
+                'Codando CSS',
+                'Codando JavaScript',
+              ]}
+            />
           </div>
         </div>
       </section>

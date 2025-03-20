@@ -7,7 +7,7 @@ const ProjectCard = ({ id, title, description, image, url, categories }) => {
           src={image}
           alt={title}
         />
-        <ul className="flex justify-end gap-1.5 mt-10">
+        <ul className="flex flex-wrap justify-end gap-1.5 mt-10">
           {categories.map((category, index) => (
             <li
               key={index}
