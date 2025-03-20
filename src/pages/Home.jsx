@@ -8,6 +8,7 @@ import Title from '../components/Title/Title';
 import Projects from '../components/Projects/Projects';
 import AboutLinks from '../components/About/AboutLinks';
 import AboutList from '../components/About/AboutList';
+import AboutSkills from '../components/About/AboutSkills';
 
 const Home = () => {
   return (
@@ -29,20 +30,20 @@ const Home = () => {
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
           <Title title="sobre mim" position="left" />
-          <div class="max-w-6xl mt-20">
-            <div class="flex flex-col lg:flex-row items-center">
-              <div class="flex justify-center flex-1 lg:basis-full">
+          <div className="max-w-6xl mt-20">
+            <div className="flex flex-col lg:flex-row items-center">
+              <div className="flex justify-center flex-1 lg:basis-full">
                 <img
                   src={image}
                   alt="Avatar"
-                  class="w-48 h-48 rounded-full shadow-lg"
+                  className="w-48 h-48 rounded-full shadow-lg"
                 />
               </div>
               <div>
-                <h3 class="font-semibold text-3xl text-black mb-3">
+                <h3 className="font-semibold text-3xl text-black mb-3">
                   Henrique Papile
                 </h3>
-                <p class="font-extralight text-base/6 text-black">
+                <p className="font-extralight text-base/6 text-black">
                   Olá! Sou Henrique Papile, tenho 31 anos e resido em São Paulo,
                   Brasil. Me formei em Análise e Desenvolvimento de Sistemas
                   pela Uninove. Nos últimos 6 anos, acumulei valiosa experiência
@@ -55,6 +56,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div>
+            <AboutSkills />
           </div>
           <div className="grid lg:grid-cols-3 gap-12 mt-16">
             <AboutList
