@@ -1,6 +1,7 @@
 import AboutLinks from './AboutLinks';
 import AboutList from './AboutList';
 import image from '../../assets/photo.png';
+import AboutMarquee from './AboutMarquee';
 
 const About = () => {
   return (
@@ -32,7 +33,11 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div></div>
+      <div className="relative flex justify-center items-center w-full overflow-x-hidden mt-20">
+        <div class="absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-white via-white z-20"></div>
+        <div class="absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-white via-white z-20"></div>
+        <AboutMarquee />
+      </div>
       <div className="grid lg:grid-cols-3 gap-12 mt-16">
         <AboutList
           title="Eu tive experiências com"
