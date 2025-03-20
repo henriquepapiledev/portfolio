@@ -1,11 +1,7 @@
-import SocialMediaLogo from '../components/SocialMediaLogo/SocialMediaLogo';
-import LinkedIn from '../assets/icon-linkedin.svg?react';
-import GitHub from '../assets/icon-github.svg?react';
-import Email from '../assets/icon-email.svg?react';
-import Whatsapp from '../assets/icon-whatsapp.svg?react';
 import Title from '../components/Title/Title';
-import Projects from '../components/Projects/Projects';
 import About from '../components/About/About';
+import Projects from '../components/Projects/Projects';
+import Contact from '../components/Contact/Contact';
 
 const Home = () => {
   return (
@@ -55,27 +51,7 @@ const Home = () => {
       <section className="pt-40 pb-40" id="contato">
         <div className="container mx-auto flex flex-col pl-4 pr-4">
           <Title title="contato" position="center" />
-          <div className="flex justify-center items-center gap-20 mt-16">
-            <SocialMediaLogo
-              href="https://www.linkedin.com/in/henriquepapile/"
-              target="_blank"
-              img={<LinkedIn />}
-            />
-            <SocialMediaLogo
-              href="https://github.com/henriquepapiledev"
-              target="_blank"
-              img={<GitHub />}
-            />
-            <SocialMediaLogo
-              href="mailto:contatohenriquepapile@gmail.com"
-              img={<Email />}
-            />
-            <SocialMediaLogo
-              href="https://web.whatsapp.com/send/?phone=5511953553054&text=Ol%C3%A1%20Henrique,%20vim%20pela%20sua%20pagina%20henrique.papile."
-              target="_blank"
-              img={<Whatsapp />}
-            />
-          </div>
+          <Contact />
         </div>
       </section>
     </>

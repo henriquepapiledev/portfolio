@@ -1,4 +1,4 @@
-const SocialMediaLogo = ({ href, target, img }) => {
+const ContactSocialMedia = ({ href, target, img }) => {
   return (
     <a className="block w-9 h-9" href={href} target={target}>
       {img}
@@ -6,4 +6,4 @@ const SocialMediaLogo = ({ href, target, img }) => {
   );
 };
 
-export default SocialMediaLogo;
+export default ContactSocialMedia;
