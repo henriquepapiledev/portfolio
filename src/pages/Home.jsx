@@ -29,19 +29,10 @@ const Home = () => {
 
       <section
         className="border-b-[1.5px] border-grey-bg pt-40 pb-40"
-        id="cases"
-      >
-        <div className="container mx-auto flex flex-col pl-4 pr-4">
-          <Title title="cases" position="left" />
-        </div>
-      </section>
-
-      <section
-        className="border-b-[1.5px] border-grey-bg pt-40 pb-40"
         id="projetos"
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
-          <Title title="projetos pessoais" position="right" />
+          <Title title="projetos" position="right" />
           <div className="grid grid-cols-2 gap-20 mt-20">
             <Projects />
           </div>

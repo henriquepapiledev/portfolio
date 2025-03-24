@@ -32,14 +32,6 @@ const Header = () => {
           <li>
             <a
               className="block link font-light text-base text-black p-2 pb-0"
-              href="#cases"
-            >
-              cases
-            </a>
-          </li>
-          <li>
-            <a
-              className="block link font-light text-base text-black p-2 pb-0"
               href="#projetos"
             >
               projetos
