@@ -6,23 +6,24 @@ const Projects = () => {
   const [projects, setProjects] = useState('');
 
   useEffect(() => {
-    setProjects(data);
+    setProjects(data.sort((a, b) => Number(b.year) - Number(a.year)));
   }, [data]);
   return (
-    <>
+    <div className="opacity-container grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-16 sm:gap-y-0 mt-20">
       {projects &&
-        projects.map(({ id, title, description, image, url, category }) => (
+        projects.map(({ id, title, image, url, background, year, type }) => (
           <ProjectCard
             key={id}
             id={id}
             title={title}
-            description={description}
             image={image}
             url={url}
-            categories={category}
+            background={background}
+            year={year}
+            type={type}
           />
         ))}
-    </>
+    </div>
   );
 };
 

@@ -36,9 +36,7 @@ const Home = () => {
       >
         <div className="container mx-auto flex flex-col pl-4 pr-4">
           <Title title="projetos" position="right" />
-          <div className="grid grid-cols-2 gap-20 mt-20">
-            <Projects />
-          </div>
+          <Projects />
         </div>
       </section>
 

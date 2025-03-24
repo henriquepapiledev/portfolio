@@ -56,3 +56,8 @@ body:after {
 .link:hover::after {
   width: 50%;
 }
+
+.opacity-container:has(.opacity-container-child:hover)
+  .opacity-container-child:not(:hover) {
+  opacity: 0.5;
+}
