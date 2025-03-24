@@ -45,7 +45,7 @@ const data = [
     category: ['react', 'javascript', 'css', 'html'],
     year: '2025',
     background: '#FEF9C3',
-    type: 'Estudo pessoal',
+    type: 'Pessoal',
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const data = [
     category: ['react', 'javascript', 'css', 'html'],
     year: '2025',
     background: '#C4B5FD',
-    type: 'Estudo pessoal',
+    type: 'Pessoal',
   },
 ];
 export default data;

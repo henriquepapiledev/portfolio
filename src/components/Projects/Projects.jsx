@@ -1,28 +1,35 @@
+import { useEffect, useState } from 'react';
 import ProjectCard from './ProjectCard';
 import data from '../../data/projects';
-import { useEffect, useState } from 'react';
+import ButtonFilters from '../Filter/ButtonFilters';
+import ProjectContext from '../../context/ProjectContext';
+import { AnimatePresence } from 'framer-motion';
 
 const Projects = () => {
-  const [projects, setProjects] = useState('');
+  const [projects, setProjects] = useState([]);
+  const [filteredProject, setFilteredProject] = useState([]);
 
   useEffect(() => {
     setProjects(data.sort((a, b) => Number(b.year) - Number(a.year)));
+    setFilteredProject(data.sort((a, b) => Number(b.year) - Number(a.year)));
   }, [data]);
+
+  const value = {
+    projects,
+    filteredProject,
+    setFilteredProject,
+  };
+
   return (
-    <div className="opacity-container grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-16 sm:gap-y-0 mt-20">
-      {projects &&
-        projects.map(({ id, title, image, url, background, year, type }) => (
-          <ProjectCard
-            key={id}
-            id={id}
-            title={title}
-            image={image}
-            url={url}
-            background={background}
-            year={year}
-            type={type}
-          />
-        ))}
+    <div className="mt-20">
+      <ProjectContext.Provider value={value}>
+        <ButtonFilters />
+        <div className="opacity-container grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-16 mt-10">
+          <AnimatePresence>
+            <ProjectCard />
+          </AnimatePresence>
+        </div>
+      </ProjectContext.Provider>
     </div>
   );
 };
