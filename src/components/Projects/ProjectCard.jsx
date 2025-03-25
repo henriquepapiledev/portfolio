@@ -10,9 +10,11 @@ const ProjectCard = () => {
       {filteredProject &&
         filteredProject.map(
           ({ id, title, image, url, background, year, type }) => (
-            <div className="opacity-container-child h-fit w-full cursor-pointer even:sm:mt-14 transition-opacity duration-300 ease-out">
+            <div
+              className="opacity-container-child h-fit w-full cursor-pointer even:sm:mt-14 transition-opacity duration-300 ease-out"
+              key={id}
+            >
               <motion.div
-                key={id}
                 layout
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
