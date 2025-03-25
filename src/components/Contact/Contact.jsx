@@ -30,7 +30,7 @@ const Contact = () => {
   if (data)
     return (
       <>
-        <div className="flex justify-center items-center gap-20 mt-16">
+        <div className="flex justify-center items-center gap-14 lg:gap-20 mt-16">
           {data.map(({ id, logo, url }) => (
             <ContactSocialMedia
               href={url}

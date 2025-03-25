@@ -18,7 +18,7 @@ const ButtonFilters = () => {
   };
 
   return (
-    <div className="flex gap-4">
+    <div className="flex flex-wrap gap-4">
       {genres.map((item) => (
         <button
           className={`font-bold text-2xl text-black p-3 ${

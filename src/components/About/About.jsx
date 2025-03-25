@@ -11,8 +11,8 @@ const About = () => {
           <div className="flex justify-center flex-1 lg:basis-full">
             <img
               src={image}
-              alt="Avatar"
-              className="w-48 h-48 rounded-full shadow-lg"
+              alt="Henrique Papile"
+              className="w-48 h-48 mb-12 lg:mb-0 rounded-full shadow-lg"
             />
           </div>
           <div>
@@ -34,11 +34,11 @@ const About = () => {
         </div>
       </div>
       <div className="relative flex justify-center items-center w-full overflow-x-hidden mt-20">
-        <div className="absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-white via-white z-20"></div>
-        <div className="absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-white via-white z-20"></div>
+        <div className="absolute inset-y-0 left-[-16px] w-14 bg-gradient-to-r from-white via-white z-20"></div>
+        <div className="absolute inset-y-0 right-[-16px] w-14 bg-gradient-to-l from-white via-white z-20"></div>
         <AboutMarquee />
       </div>
-      <div className="grid lg:grid-cols-3 gap-12 mt-16">
+      <div className="grid lg:grid-cols-3 gap-6 lg:gap-12 mt-16">
         <AboutList
           title="Eu tive experiências com"
           experiences={[
