@@ -8,11 +8,11 @@
 }
 
 .link:hover::after {
-  width: 50%;
+  width: 16px;
 }
 
 :global(.active)::after {
-  width: 50%;
+  width: 16px;
 }
 
 @media (max-width: 62rem) {
