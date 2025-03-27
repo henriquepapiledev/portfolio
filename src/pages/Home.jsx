@@ -6,10 +6,7 @@ import Contact from '../components/Contact/Contact';
 const Home = () => {
   return (
     <>
-      <section
-        className="h-[calc(100dvh-64px)] lg:h-[calc(100dvh-88px)] border-b-[1.5px] border-grey-bg"
-        id="home"
-      >
+      <section className="h-dvh border-b-[1.5px] border-grey-bg" id="home">
         <div className="container mx-auto flex flex-col justify-center items-center h-full pl-4 pr-4">
           <h1 className="font-bold text-[2.5rem] lg:text-5xl text-black text-center mb-2">
             Olá, meu nome é <span>Henrique</span>.

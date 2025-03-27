@@ -1,0 +1,25 @@
+.link::after {
+  content: '';
+  display: block;
+  background: #000;
+  width: 0;
+  height: 1px;
+  transition: 0.3s;
+}
+
+.link:hover::after {
+  width: 50%;
+}
+
+:global(.active)::after {
+  width: 50%;
+}
+
+@media (max-width: 62rem) {
+  .link::after {
+    display: none;
+  }
+  .link:not(:global(.active)) {
+    opacity: 0.5;
+  }
+}
