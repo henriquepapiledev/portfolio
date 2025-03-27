@@ -13,21 +13,16 @@ const Header = () => {
     if (mobile) return;
 
     const handleScroll = () => {
-      if (window.scrollY > 20) {
-        controls.start({
-          width: '50%',
-          backgroundColor: 'var(--backdrop)',
-          backdropFilter: 'blur(12px)',
-          outline: '1px solid var(--color-grey-bg)',
-        });
-      } else {
-        controls.start({
-          width: '100%',
-          backgroundColor: 'transparent',
-          backdropFilter: 'none',
-          outline: 'none',
-        });
-      }
+      const scrollVertical = window.scrollY > 20;
+      controls.start({
+        width: scrollVertical ? '50%' : '100%',
+        backgroundColor: scrollVertical
+          ? 'var(--backdrop)'
+          : 'rgb(255 255 255 255)',
+        backdropFilter: scrollVertical ? 'blur(12px)' : 'none',
+        outline: scrollVertical ? '1px solid var(--color-grey-bg)' : 'none',
+        transition: { duration: 0.5, ease: 'easeInOut' }, // Suaviza a transição
+      });
     };
 
     window.addEventListener('scroll', handleScroll);
