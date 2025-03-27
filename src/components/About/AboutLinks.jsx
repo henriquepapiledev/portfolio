@@ -38,7 +38,10 @@ const AboutLinks = () => {
     <>
       <ul className="flex flex-wrap gap-3 font-normal text-sm uppercase opacity-container">
         {aboutLinks.map(({ title, href, img, target }) => (
-          <li className="opacity-container-child h-fit transition-opacity duration-300 ease-out">
+          <li
+            key={title}
+            className="opacity-container-child h-fit transition-opacity duration-300 ease-out"
+          >
             <a
               href={href}
               target={target ? '_blank' : ''}

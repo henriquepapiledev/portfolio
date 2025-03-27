@@ -24,7 +24,7 @@ const Projects = () => {
     <div className="mt-20">
       <ProjectContext.Provider value={value}>
         <ButtonFilters />
-        <div className="opacity-container grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-16 mt-10">
+        <div className="opacity-container grid grid-cols-1 gap-y-10 sm:grid-cols-2 sm:gap-x-16 mt-8">
           <AnimatePresence>
             <ProjectCard />
           </AnimatePresence>
