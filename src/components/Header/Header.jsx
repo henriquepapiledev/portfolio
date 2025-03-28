@@ -2,37 +2,43 @@ import Logo from '../Logo/Logo';
 import useMedia from '../../hooks/useMedia';
 import HeaderLink from './HeaderLink';
 import { navLinks } from '../../data/navLinks';
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Header = () => {
   const mobile = useMedia('(max-width: 62rem)');
-  const controls = useAnimation();
+  const { scrollY } = useScroll();
 
-  useEffect(() => {
-    if (mobile) return;
-
-    const handleScroll = () => {
-      const scrollVertical = window.scrollY > 20;
-      controls.start({
-        width: scrollVertical ? '50%' : '100%',
-        backgroundColor: scrollVertical
-          ? 'var(--backdrop)'
-          : 'rgb(255 255 255 255)',
-        backdropFilter: scrollVertical ? 'blur(12px)' : 'none',
-        outline: scrollVertical ? '1px solid var(--color-grey-bg)' : 'none',
-        transition: { duration: 0.5, ease: 'easeInOut' }, // Suaviza a transição
-      });
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [controls, mobile]);
+  const background = useTransform(
+    scrollY,
+    [0, 500],
+    !mobile
+      ? ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.8)']
+      : ['transparent', 'transparent'],
+  );
+  const width = useTransform(
+    scrollY,
+    [0, 500],
+    !mobile ? [1280, 800] : ['inherit', 'inherit'],
+  );
+  const backdropFilter = useTransform(
+    scrollY,
+    [0, 500],
+    !mobile ? ['none', 'blur(12px)'] : ['none', 'none'],
+  );
+  const outline = useTransform(
+    scrollY,
+    [0, 500],
+    !mobile ? ['none', '1px solid var(--color-grey-bg)'] : ['none', 'none'],
+  );
 
   return (
     <motion.header
-      initial={{ width: '100%' }}
-      animate={controls}
+      style={{
+        background,
+        backdropFilter,
+        width,
+        outline,
+      }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
       className="container fixed left-0 right-0 top-4 z-50 mx-auto w-full px-4 py-2 rounded-full"
     >

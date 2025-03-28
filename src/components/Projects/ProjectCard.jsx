@@ -1,6 +1,7 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import ProjectContext from '../../context/ProjectContext';
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
+import style from '../../components/Projects/ProjectCard.module.css';
 
 const ProjectCard = () => {
   const { filteredProject } = useContext(ProjectContext);
@@ -25,14 +26,13 @@ const ProjectCard = () => {
                 <a className="h-fit w-full" target="_blank" href={url}>
                   <span>
                     <div
-                      className="aspect-[3/2] w-full overflow-hidden rounded-3xl"
+                      className={`${style.image} aspect-[3/2] w-full overflow-hidden rounded-3xl`}
                       style={{ backgroundColor: background }}
                     >
                       <img
-                        alt={title}
-                        className="aspect-[3/2] w-full object-cover transition duration-300 hover:scale-[1.015]"
+                        className="h-full w-full rounded-3xl hover:scale-[1.015] transition duration-300 p-14"
                         src={image}
-                        style={{ color: 'transparent' }}
+                        alt=""
                       />
                     </div>
                   </span>
