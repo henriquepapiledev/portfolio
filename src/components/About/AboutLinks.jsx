@@ -28,7 +28,7 @@ const AboutLinks = () => {
     },
     {
       title: 'Currículo',
-      href: 'src/assets/pdf/Curriculum-Henrique-Papile-da-Silva-Front-End-Pleno.pdf',
+      href: 'https://docs.google.com/document/d/1usjH4KSqas9QI_bMS76IwtEdGhfVu8tnNZApibnt7YE/',
       img: <Arrow />,
       target: true,
     },

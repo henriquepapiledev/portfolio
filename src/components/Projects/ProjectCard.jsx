@@ -1,61 +1,85 @@
 import { useContext, useState } from 'react';
 import ProjectContext from '../../context/ProjectContext';
-import { motion, useMotionValue, useTransform } from 'framer-motion';
-import style from '../../components/Projects/ProjectCard.module.css';
+import { motion } from 'framer-motion';
+import ProjectModal from './ProjectModal';
 
 const ProjectCard = () => {
   const { filteredProject } = useContext(ProjectContext);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = (project) => {
+    setSelectedProject(project);
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+    setSelectedProject(null);
+  };
 
   return (
     <>
       {filteredProject &&
-        filteredProject.map(
-          ({ id, title, image, url, background, year, type }) => (
-            <div
-              className="opacity-container-child h-fit w-full cursor-pointer even:sm:mt-14 transition-opacity duration-300 ease-out"
-              key={id}
+        filteredProject.map((project) => (
+          <div
+            className="opacity-container-child h-fit w-full cursor-pointer even:sm:mt-14 transition-opacity duration-300 ease-out"
+            key={project.id}
+            onClick={() => openModal(project)}
+          >
+            <motion.div
+              layout
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+              id={project.id}
             >
-              <motion.div
-                layout
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-                id={id}
-              >
-                <a className="h-fit w-full" target="_blank" href={url}>
-                  <span>
-                    <div
-                      className={`${style.image} aspect-[3/2] w-full overflow-hidden rounded-3xl`}
-                      style={{ backgroundColor: background }}
-                    >
-                      <img
-                        className="h-full w-full rounded-3xl hover:scale-[1.015] transition duration-300 p-14"
-                        src={image}
-                        alt=""
-                      />
+              <div className="h-fit w-full">
+                <span>
+                  <div
+                    className="group aspect-[3/2] w-full overflow-hidden rounded-md p-14"
+                    style={{ backgroundColor: project.background }}
+                  >
+                    <img
+                      className="w-full object-cover rounded-3xl group-hover:scale-[1.015] transition duration-300 rounded-md shadow-lg"
+                      src={project.image}
+                      alt=""
+                    />
+                  </div>
+                </span>
+                <span>
+                  <div className="mt-4 space-y-2">
+                    <h5 className="font-extrabold text-lg text-black">
+                      {project.title}
+                    </h5>
+                    <div className="flex justify-between">
+                      <p className="font-extralight text-base text-black">
+                        {project.type}
+                      </p>
+                      <p className="font-extralight text-base text-black">
+                        {project.year}
+                      </p>
                     </div>
-                  </span>
-                  <span>
-                    <div className="mt-4 space-y-2">
-                      <h5 className="font-extrabold text-lg text-black">
-                        {title}
-                      </h5>
-                      <div className="flex justify-between">
-                        <p className="font-extralight text-base text-black">
-                          {type}
-                        </p>
-                        <p className="font-extralight text-base text-black">
-                          {year}
-                        </p>
-                      </div>
-                    </div>
-                  </span>
-                </a>
-              </motion.div>
-            </div>
-          ),
-        )}
+                  </div>
+                </span>
+              </div>
+            </motion.div>
+          </div>
+        ))}
+
+      {/* Modal */}
+      {isOpen && selectedProject && (
+        <ProjectModal
+          selectedProject={selectedProject}
+          title={selectedProject.title}
+          description={selectedProject.description}
+          image={selectedProject.image}
+          type={selectedProject.type}
+          year={selectedProject.year}
+          onClick={closeModal}
+        />
+      )}
     </>
   );
 };

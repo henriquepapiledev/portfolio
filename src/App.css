@@ -12,6 +12,9 @@
 
   /* background */
   --color-grey-bg: #e7e7e7;
+
+  /* box shadow */
+  --shadow-lg: 6px 12px 12px -5px rgba(0, 0, 0, 0.75);
 }
 
 .font-DotGothic16 {
