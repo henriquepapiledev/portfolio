@@ -12,11 +12,11 @@ const AboutMarqueeItem = ({ images }) => {
         >
           {images.map(({ id, icon, desc }) => (
             <div
-              className="flex items-center bg-black px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
+              className="flex items-center bg-btn-bg px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
               key={id}
             >
               <img className="w-5 h-5" src={icon} />
-              <span className="font-extralight text-sm text-white">{desc}</span>
+              <span className="font-normal text-sm text-primary">{desc}</span>
             </div>
           ))}
         </motion.div>
@@ -28,11 +28,11 @@ const AboutMarqueeItem = ({ images }) => {
         >
           {images.map(({ id, icon, desc }) => (
             <div
-              className="flex items-center bg-black px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
+              className="flex items-center bg-btn-bg px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
               key={id}
             >
               <img className="w-5 h-5" src={icon} />
-              <span className="font-extralight text-sm text-white">{desc}</span>
+              <span className="font-normal text-sm text-primary">{desc}</span>
             </div>
           ))}
         </motion.div>
@@ -44,11 +44,11 @@ const AboutMarqueeItem = ({ images }) => {
         >
           {images.map(({ id, icon, desc }) => (
             <div
-              className="flex items-center bg-black px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
+              className="flex items-center bg-btn-bg px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
               key={id}
             >
               <img className="w-5 h-5" src={icon} />
-              <span className="font-extralight text-sm text-white">{desc}</span>
+              <span className="font-normal text-sm text-primary">{desc}</span>
             </div>
           ))}
         </motion.div>

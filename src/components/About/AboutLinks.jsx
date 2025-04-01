@@ -45,7 +45,7 @@ const AboutLinks = () => {
             <a
               href={href}
               target={target ? '_blank' : ''}
-              className="flex items-center gap-2"
+              className="flex items-center text-sm text-primary gap-2"
             >
               {title}
               {img}

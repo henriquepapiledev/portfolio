@@ -1,0 +1,3 @@
+[data-theme='dark'] .logo {
+  filter: contrast(0) brightness(2);
+}

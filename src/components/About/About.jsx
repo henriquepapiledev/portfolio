@@ -12,14 +12,14 @@ const About = () => {
             <img
               src={image}
               alt="Henrique Papile"
-              className="w-48 h-48 mb-12 lg:mb-0 rounded-full shadow-lg"
+              className="w-48 h-48 mb-12 lg:mb-0 rounded-full"
             />
           </div>
           <div>
-            <h3 className="font-semibold text-3xl text-black mb-3">
+            <h3 className="font-semibold text-3xl text-primary mb-3">
               Henrique Papile
             </h3>
-            <p className="font-extralight text-base/6 text-black">
+            <p className="font-extralight text-base/6 text-secondary">
               Olá! Sou Henrique Papile, tenho 31 anos e resido em São Paulo,
               Brasil. Me formei em Análise e Desenvolvimento de Sistemas pela
               Uninove. Nos últimos 6 anos, acumulei valiosa experiência no campo
@@ -34,11 +34,11 @@ const About = () => {
         </div>
       </div>
       <div className="relative flex justify-center items-center w-full overflow-x-hidden mt-20">
-        <div className="absolute inset-y-0 left-[-16px] w-14 bg-gradient-to-r from-white via-white z-20"></div>
-        <div className="absolute inset-y-0 right-[-16px] w-14 bg-gradient-to-l from-white via-white z-20"></div>
+        <div className="absolute inset-y-0 left-[-16px] w-10 bg-gradient-to-r from-primary-bg via-primary-bg z-20"></div>
+        <div className="absolute inset-y-0 right-[-16px] w-10 bg-gradient-to-l from-primary-bg via-primary-bg z-20"></div>
         <AboutMarquee />
       </div>
-      <div className="grid lg:grid-cols-3 gap-6 lg:gap-12 mt-16">
+      <div className="grid lg:grid-cols-3 gap-6 mt-16">
         <AboutList
           title="Eu tive experiências com"
           experiences={[

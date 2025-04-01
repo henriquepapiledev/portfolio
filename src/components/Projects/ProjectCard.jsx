@@ -42,7 +42,7 @@ const ProjectCard = () => {
                     style={{ backgroundColor: project.background }}
                   >
                     <img
-                      className="w-full object-cover rounded-3xl group-hover:scale-[1.015] transition duration-300 rounded-md shadow-lg"
+                      className="w-full object-cover group-hover:scale-[1.015] transition duration-300 rounded-2xl shadow-lg"
                       src={project.image}
                       alt=""
                     />
@@ -50,14 +50,14 @@ const ProjectCard = () => {
                 </span>
                 <span>
                   <div className="mt-4 space-y-2">
-                    <h5 className="font-extrabold text-lg text-black">
+                    <h5 className="font-extrabold text-lg text-primary">
                       {project.title}
                     </h5>
                     <div className="flex justify-between">
-                      <p className="font-extralight text-base text-black">
+                      <p className="font-extralight text-sm text-secondary">
                         {project.type}
                       </p>
-                      <p className="font-extralight text-base text-black">
+                      <p className="font-extralight text-sm text-secondary">
                         {project.year}
                       </p>
                     </div>

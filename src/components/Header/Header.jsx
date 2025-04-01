@@ -3,8 +3,12 @@ import useMedia from '../../hooks/useMedia';
 import HeaderLink from './HeaderLink';
 import { navLinks } from '../../data/navLinks';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
+import { ThemeContext } from '../../context/ThemeContext';
+import { useContext } from 'react';
 
 const Header = () => {
+  const theme = useContext(ThemeContext);
   const mobile = useMedia('(max-width: 62rem)');
   const { scrollY } = useScroll();
 
@@ -12,13 +16,13 @@ const Header = () => {
     scrollY,
     [0, 500],
     !mobile
-      ? ['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 0.8)']
+      ? ['rgba(255, 255, 255, 0)', 'var(--color-primary-bg-opacity)']
       : ['transparent', 'transparent'],
   );
   const width = useTransform(
     scrollY,
     [0, 500],
-    !mobile ? [1280, 800] : ['inherit', 'inherit'],
+    !mobile ? [1280, 600] : ['inherit', 'inherit'],
   );
   const backdropFilter = useTransform(
     scrollY,
@@ -40,7 +44,7 @@ const Header = () => {
         outline,
       }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className="container fixed left-0 right-0 top-4 z-50 mx-auto w-full px-4 py-2 rounded-full"
+      className="container fixed left-0 right-0 top-4 z-50 mx-auto w-full px-4 py-1 rounded-full"
     >
       <motion.nav
         initial={{ y: -20, opacity: 0 }}
@@ -68,8 +72,10 @@ const Header = () => {
             ))}
           </ul>
         )}
-        {/* button dark mode */}
-        <div></div>
+        <DarkModeSwitch
+          ischecked={theme.isDark}
+          handleChange={() => theme.setIsDark(!theme.isDark)}
+        />
       </motion.nav>
     </motion.header>
   );

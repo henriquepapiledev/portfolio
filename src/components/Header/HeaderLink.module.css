@@ -1,7 +1,7 @@
 .link::after {
   content: '';
   display: block;
-  background: #000;
+  background: var(--color-primary);
   width: 0;
   height: 1px;
   transition: 0.3s;
@@ -13,6 +13,10 @@
 
 :global(.active)::after {
   width: 16px;
+}
+
+[data-theme='dark'] .link {
+  filter: contrast(0) brightness(2);
 }
 
 @media (max-width: 62rem) {

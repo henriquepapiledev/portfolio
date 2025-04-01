@@ -1,0 +1,49 @@
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  background: var(--color-secondary);
+}
+
+.slider:hover {
+  background: #a3a3a3;
+}
+
+.slider:before {
+  content: '';
+  position: absolute;
+  display: flex;
+  left: 4px;
+  bottom: 3px;
+  align-items: center;
+  justify-content: center;
+  background: url('../../assets/icon-sun.svg') no-repeat center center;
+  background-size: 73%;
+  background-color: var(--color-white);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  content: '';
+  background: url('../../assets/icon-moon.svg') no-repeat center center;
+  background-color: var(--color-white);
+  background-size: 70%;
+  transform: translateX(21px);
+}
+
+input:checked + .slider {
+  background: var(--color-btn-bg);
+}

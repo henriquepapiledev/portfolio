@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const ButtonFilters = () => {
   const genres = [
-    { name: 'Todos', color: 'var(--color-black)' },
-    { name: 'Pessoal', color: 'var(--color-black)' },
-    { name: 'Empresa', color: 'var(--color-black)' },
+    { name: 'Todos', color: 'var(--color-btn-bg)' },
+    { name: 'Pessoal', color: 'var(--color-btn-bg)' },
+    { name: 'Empresa', color: 'var(--color-btn-bg)' },
   ];
 
   const [tabActive, setTabActive] = useState(0);
@@ -29,13 +29,19 @@ const ButtonFilters = () => {
     <div className="relative flex items-start gap-1 justify-start p-1.5">
       {genres.map(({ name, color }, index) => (
         <motion.div
-          className="relative px-6 py-2 font-extralight text-base cursor-pointer"
+          className="relative px-6 py-2 font-light text-base cursor-pointer"
           key={index}
           initial={{
-            color: index === selected ? '#fff' : 'var(--color-black)',
+            color:
+              index === selected
+                ? 'var(--color-primary)'
+                : 'var(--color-primary)',
           }}
           animate={{
-            color: index === selected ? '#fff' : 'var(--color-black)',
+            color:
+              index === selected
+                ? 'var(--color-primary)'
+                : 'var(--color-primary)',
           }}
           transition={{ duration: 0.3 }}
           onTap={() => {
