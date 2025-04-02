@@ -39,7 +39,7 @@ const Home = () => {
 
       <section className="pt-16 pb-16 lg:pt-40 lg:pb-40" id="contato">
         <div className="container mx-auto max-w-7xl flex flex-col pl-4 pr-4">
-          <Title title="contato" position="center" />
+          <Title title="contato" position="left" />
           <Contact />
         </div>
       </section>
