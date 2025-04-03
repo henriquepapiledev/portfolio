@@ -5,6 +5,7 @@ import Home from '../pages/Home';
 import useMedia from '../hooks/useMedia';
 import { useContext } from 'react';
 import { ThemeContext } from '../context/ThemeContext';
+import NavTop from './NavTop/NavTop';
 
 const Main = () => {
   const mobile = useMedia('(max-width: 62rem)');
@@ -20,6 +21,7 @@ const Main = () => {
       <main className="AppBody flex-auto">
         <Home />
       </main>
+      <NavTop />
       <Footer />
     </div>
   );

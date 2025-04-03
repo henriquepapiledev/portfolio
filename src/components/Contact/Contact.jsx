@@ -69,7 +69,7 @@ const Contact = () => {
             label="E-mail"
             type="text"
             name="email"
-            placeholder="E-mail"
+            placeholder="Digite seu e-mail"
             {...email}
           />
           <TextArea

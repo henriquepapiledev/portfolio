@@ -5,6 +5,7 @@ import { navLinks } from '../../data/navLinks';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import DarkModeSwitch from '../DarkModeSwitch/DarkModeSwitch';
 import { ThemeContext } from '../../context/ThemeContext';
+import { Link } from 'react-scroll';
 import { useContext } from 'react';
 
 const Header = () => {
@@ -61,9 +62,15 @@ const Header = () => {
         role="navigation"
         aria-label="Menu de navegação"
       >
-        <a href="/">
+        <Link
+          to="home"
+          smooth={true}
+          duration={500}
+          offset={-80}
+          className="cursor-pointer"
+        >
           <Logo />
-        </a>
+        </Link>
 
         {!mobile && (
           <ul className="flex items-center gap-2.5">

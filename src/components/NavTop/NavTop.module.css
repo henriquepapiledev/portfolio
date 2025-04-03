@@ -1,0 +1,19 @@
+.visible {
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+[data-theme='dark'] .visible {
+  background: var(--color-primary-bg);
+}
+
+[data-theme='dark'] .visible:hover {
+  background: var(--color-btn-bg);
+}
+
+[data-theme='dark'] .visible svg {
+  filter: contrast(0) brightness(2);
+}
