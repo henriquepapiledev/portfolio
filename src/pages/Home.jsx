@@ -2,18 +2,33 @@ import Title from '../components/Title/Title';
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
 import Contact from '../components/Contact/Contact';
+import { motion } from 'framer-motion';
 
 const Home = () => {
   return (
     <>
       <section className="h-dvh border-b-[1.5px] border-grey/30" id="home">
         <div className="container mx-auto max-w-7xl flex flex-col justify-center items-center h-full pl-4 pr-4">
-          <h1 className="font-bold text-3xl lg:text-5xl text-primary text-center mb-2">
+          <motion.h1
+            initial={{ filter: 'blur(10px)', opacity: 0, y: -50 }}
+            animate={{ filter: 'blur(0)', opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.6,
+              duration: 0.7,
+              ease: 'easeInOut',
+            }}
+            className="font-bold text-3xl lg:text-5xl text-primary text-center mb-2"
+          >
             Olá, meu nome é Henrique
-          </h1>
-          <p className="font-DotGothic16 text-2xl lg:text-4xl text-secondary">
-            Front-End Developer_
-          </p>
+          </motion.h1>
+          <motion.p
+            initial={{ filter: 'blur(10px)', opacity: 0, y: -20 }}
+            animate={{ filter: 'blur(0)', opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.7, ease: 'easeInOut' }}
+            className="font-DotGothic16 text-2xl lg:text-4xl text-secondary"
+          >
+            Front-End Developer
+          </motion.p>
         </div>
       </section>
 

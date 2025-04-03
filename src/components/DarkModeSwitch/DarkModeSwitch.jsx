@@ -6,7 +6,7 @@ const DarkModeSwitch = ({ handleChange, ischecked }) => {
       <label className={style.switch}>
         <input type="checkbox" onChange={handleChange} checked={ischecked} />
         <span
-          className={` ${style.slider} absolute top-0 left-0 right-0 bottom-0 rounded-full transition duration-300 cursor-pointer`}
+          className={` ${style.slider} absolute top-0 left-0 right-0 bottom-0 bg-grey-bg hover:bg-grey rounded-full transition duration-300 cursor-pointer`}
         ></span>
       </label>
     </div>

@@ -11,14 +11,6 @@
   height: 0;
 }
 
-.slider {
-  background: var(--color-grey-bg);
-}
-
-.slider:hover {
-  background: var(--color-grey);
-}
-
 .slider:before {
   content: '';
   position: absolute;
@@ -28,7 +20,7 @@
   align-items: center;
   justify-content: center;
   background: url('../../assets/icon-sun.svg') no-repeat center center;
-  background-size: 73%;
+  background-size: 10px;
   background-color: #fff;
   width: 16px;
   height: 16px;
@@ -40,7 +32,7 @@ input:checked + .slider:before {
   content: '';
   background: url('../../assets/icon-moon.svg') no-repeat center center;
   background-color: #fff;
-  background-size: 70%;
+  background-size: 10px;
   transform: translateX(21px);
 }
 

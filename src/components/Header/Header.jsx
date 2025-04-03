@@ -44,20 +44,16 @@ const Header = () => {
         width,
         outline,
       }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0.3,
+        duration: 0.5,
+        ease: 'easeOut',
+      }}
       className="container fixed left-0 right-0 top-4 z-50 mx-auto w-full px-4 py-1 rounded-full"
     >
-      <motion.nav
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{
-          delay: 0.3,
-          duration: 0.3,
-          ease: 'easeOut',
-          type: 'spring',
-          stiffness: 80,
-          damping: 12,
-        }}
+      <nav
         className="max-screen flex w-full items-center justify-between gap-6"
         role="navigation"
         aria-label="Menu de navegação"
@@ -83,7 +79,7 @@ const Header = () => {
           ischecked={theme.isDark}
           handleChange={() => theme.setIsDark(!theme.isDark)}
         />
-      </motion.nav>
+      </nav>
     </motion.header>
   );
 };

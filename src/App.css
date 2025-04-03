@@ -65,3 +65,20 @@
   .opacity-container-child:not(:hover) {
   opacity: 0.5;
 }
+
+/* scroll bar */
+::-webkit-scrollbar {
+  height: 12px;
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-primary-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  cursor: grab;
+  border: 2px solid var(--color-primary-bg);
+  border-radius: 0.75rem;
+  background-color: var(--color-secondary);
+}
