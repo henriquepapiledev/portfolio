@@ -57,7 +57,7 @@ const Contact = () => {
 
   return (
     <>
-      <div className="w-full lg:w-[50%]">
+      <div className="w-full lg:w-[50%] m-auto">
         <form onSubmit={sendEmail} className="flex flex-col w-full gap-4 mt-16">
           <motion.div
             initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}

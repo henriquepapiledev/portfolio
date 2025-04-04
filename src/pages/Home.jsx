@@ -1,6 +1,7 @@
 import About from '../components/About/About';
 import Projects from '../components/Projects/Projects';
 import Contact from '../components/Contact/Contact';
+import Experience from '../components/Experience/Experience';
 import BlurRevealText from '../ui/text-animation/BlurRevealText';
 
 const Home = () => {
@@ -52,6 +53,25 @@ const Home = () => {
 
       <section
         className="border-b-[1.5px] border-grey/30 pt-16 pb-16 lg:pt-40 lg:pb-40"
+        id="experiencias"
+      >
+        <div className="container mx-auto max-w-7xl flex flex-col pl-4 pr-4">
+          <BlurRevealText
+            Wrapper="h2"
+            className="text-3xl text-primary font-extrabold text-right"
+            text="experiências"
+            transition={{
+              duration: 0.6,
+              ease: [0.25, 0.1, 0.25, 1],
+              delay: 0.3,
+            }}
+          />
+          <Experience />
+        </div>
+      </section>
+
+      <section
+        className="border-b-[1.5px] border-grey/30 pt-16 pb-16 lg:pt-40 lg:pb-40"
         id="projetos"
       >
         <div className="container mx-auto max-w-7xl flex flex-col pl-4 pr-4">
@@ -73,7 +93,7 @@ const Home = () => {
         <div className="container mx-auto max-w-7xl flex flex-col pl-4 pr-4">
           <BlurRevealText
             Wrapper="h2"
-            className="text-3xl text-primary font-extrabold"
+            className="text-3xl text-primary font-extrabold text-center"
             text="contato"
             transition={{
               duration: 0.6,

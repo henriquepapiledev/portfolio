@@ -23,7 +23,7 @@ const Header = () => {
   const width = useTransform(
     scrollY,
     [0, 500],
-    !mobile ? [1280, 600] : ['inherit', 'inherit'],
+    !mobile ? [1280, 800] : ['inherit', 'inherit'],
   );
   const backdropFilter = useTransform(
     scrollY,
