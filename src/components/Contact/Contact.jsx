@@ -4,6 +4,7 @@ import Button from '../Form/Button';
 import useForm from '../../hooks/useForm';
 import emailjs from '@emailjs/browser';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
   const name = useForm();
@@ -58,33 +59,77 @@ const Contact = () => {
     <>
       <div className="w-full lg:w-[50%]">
         <form onSubmit={sendEmail} className="flex flex-col w-full gap-4 mt-16">
-          <Input
-            label="Nome"
-            type="text"
-            name="name"
-            placeholder="Digite seu nome"
-            {...name}
-          />
-          <Input
-            label="E-mail"
-            type="text"
-            name="email"
-            placeholder="Digite seu e-mail"
-            {...email}
-          />
-          <TextArea
-            label="Mensagem"
-            type="text"
-            name="mensagem"
-            placeholder="Digite sua mensagem..."
-            {...message}
-          />
+          <motion.div
+            initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+            whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.4,
+              duration: 0.5,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            viewport={{ once: true }}
+          >
+            <Input
+              label="Nome"
+              type="text"
+              name="name"
+              placeholder="Digite seu nome"
+              {...name}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+            whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.5,
+              duration: 0.5,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            viewport={{ once: true }}
+          >
+            <Input
+              label="E-mail"
+              type="text"
+              name="email"
+              placeholder="Digite seu e-mail"
+              {...email}
+            />
+          </motion.div>
+          <motion.div
+            initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+            whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.6,
+              duration: 0.5,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            viewport={{ once: true }}
+          >
+            <TextArea
+              label="Mensagem"
+              type="text"
+              name="mensagem"
+              placeholder="Digite sua mensagem..."
+              {...message}
+            />
+          </motion.div>
 
-          {loading ? (
-            <Button disabled>Carregando...</Button>
-          ) : (
-            <Button>Enviar</Button>
-          )}
+          <motion.div
+            initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
+            whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
+            transition={{
+              delay: 0.7,
+              duration: 0.5,
+              ease: [0.25, 0.1, 0.25, 1],
+            }}
+            viewport={{ once: true }}
+          >
+            {loading ? (
+              <Button disabled>Carregando...</Button>
+            ) : (
+              <Button>Enviar</Button>
+            )}
+          </motion.div>
 
           {successMessage && (
             <p className="font-light text-base text-green-600 text-center mt-4">

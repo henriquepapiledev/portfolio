@@ -82,3 +82,19 @@
   border-radius: 0.75rem;
   background-color: var(--color-secondary);
 }
+
+/* selection */
+/* ::-moz-selection {
+  color: var(--color-white);
+  background: var(--color-secondary);
+} */
+
+::selection {
+  color: var(--color-white);
+  background: var(--color-secondary);
+}
+
+[data-theme='dark'] ::selection {
+  color: var(--color-primary-bg);
+  background: var(--color-secondary);
+}
