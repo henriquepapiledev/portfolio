@@ -23,12 +23,12 @@ const MouseScrollDown = () => {
         className="flex justify-center items-center transition duration-300 ease-out hover:opacity-75 active:scale-[0.9] cursor-pointer m-auto"
       >
         <div
-          className={`${styles.arrow} relative w-10 h-10 flex justify-center items-center bg-secondary rounded-full z-10`}
+          className={`${styles.arrow} relative w-10 h-10 flex justify-center items-center bg-[#dedede] rounded-full z-10`}
         >
           <Arrow />
         </div>
         <div
-          className={`${styles.bloom} absolute w-24 h-24 bg-secondary opacity-50 rounded-full`}
+          className={`${styles.bloom} absolute w-24 h-24 bg-[#dedede] opacity-50 rounded-full`}
         ></div>
       </Link>
     </motion.div>
