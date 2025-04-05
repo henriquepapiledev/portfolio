@@ -38,7 +38,7 @@ const ProjectCard = () => {
               <div className="h-fit w-full">
                 <span>
                   <div
-                    className="group aspect-[3/2] w-full overflow-hidden rounded-md p-14"
+                    className="group aspect-[3/2] w-full overflow-hidden rounded-2xl p-14"
                     style={{ backgroundColor: project.background }}
                   >
                     <img

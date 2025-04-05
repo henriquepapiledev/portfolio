@@ -33,7 +33,7 @@ const ProjectModal = ({
           filter: 'blur(5px)',
           transition: { ease: 'easeIn', duration: 0.22 },
         }}
-        className="bg-primary-bg w-[60rem] rounded-md p-6"
+        className="bg-primary-bg w-[60rem] rounded-2xl p-6"
       >
         <motion.div
           initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ const ProjectModal = ({
         </motion.div>
 
         <div className="h-[50vh] lg:h-auto overflow-y-scroll lg:overflow-y-hidden">
-          <header className="flex flex-col gap-4 mt-8">
+          <header className="flex flex-col gap-4 mt-4">
             <motion.div
               initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
               whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}

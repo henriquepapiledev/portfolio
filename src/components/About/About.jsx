@@ -69,8 +69,9 @@ const About = () => {
         <AboutMarquee />
       </motion.div>
 
-      <div className="grid lg:grid-cols-3 gap-6 mt-16">
+      <div className="flex overflow-x-scroll overflow-y-hidden sm:grid lg:grid-cols-3 gap-6 mt-16">
         <motion.div
+          className="flex-[1_0_85%] sm:flex-auto"
           initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
           whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
           transition={{
@@ -92,6 +93,7 @@ const About = () => {
           />
         </motion.div>
         <motion.div
+          className="flex-[1_0_85%] sm:flex-auto"
           initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
           whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
           transition={{
@@ -114,6 +116,7 @@ const About = () => {
           />
         </motion.div>
         <motion.div
+          className="flex-[1_0_85%] sm:flex-auto"
           initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
           whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
           transition={{
