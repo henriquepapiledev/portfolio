@@ -3,6 +3,7 @@ import Projects from '../components/Projects/Projects';
 import Contact from '../components/Contact/Contact';
 import Experience from '../components/Experience/Experience';
 import BlurRevealText from '../ui/text-animation/BlurRevealText';
+import MouseScrollDown from '../components/MouseScrollDown/MouseScrollDown';
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
               delay: 0.7,
             }}
           />
+          <MouseScrollDown />
         </div>
       </section>
 
