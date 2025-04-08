@@ -5,6 +5,7 @@ const data = [
     description:
       'Site desenvolvido utilizando uma combinação de tecnologias modernas, incluindo HTML, CSS, Angular e integração com várias APIs de terceiros.',
     image: 'src/assets/projects/trisul.png',
+    imageOverlay: 'https://i.imgur.com/qZX2yUz.gif',
     url: 'https://trisul-sa.com.br',
     category: ['Angular', 'JavaScript', 'Css', 'Html'],
     year: '2022',
@@ -17,6 +18,7 @@ const data = [
     description:
       'Site desenvolvido utilizando uma combinação de tecnologias modernas, incluindo HTML, CSS e Angular.',
     image: 'src/assets/projects/vamos.png',
+    imageOverlay: 'https://i.imgur.com/i1DtIId.gif',
     url: 'https://vamos.com.br',
     category: ['Angular', 'JavaScript', 'Css', 'Html'],
     year: '2023',
@@ -29,6 +31,7 @@ const data = [
     description:
       'Site desenvolvido utilizando uma combinação de tecnologias modernas, incluindo HTML, CSS, JavaScript e Wordpress Gutenberg.',
     image: 'src/assets/projects/promatre.png',
+    imageOverlay: 'https://i.imgur.com/BeEDbpu.gif',
     url: 'https://promatre.com.br',
     category: ['wordpress', 'JavaScript', 'Css', 'Html'],
     year: '2021',
@@ -41,6 +44,7 @@ const data = [
     description:
       'Este é um projeto criado no curso de React da Origamid. Consiste em uma rede social de cães, onde você se cadastra, realiza o login e realiza postagens com a foto do cão, nome, peso e idade, como também pode realizar comentários nas postagens.',
     image: 'src/assets/projects/rede-social-dogs.png',
+    imageOverlay: 'https://i.imgur.com/9KShrDM.gif',
     url: 'https://rede-social-dogs-chi.vercel.app',
     category: ['React', 'JavaScript', 'TailwindCSS', 'Css', 'Html'],
     year: '2025',
@@ -53,6 +57,7 @@ const data = [
     description:
       'Este é um aplicativo que utiliza a API do TMDB para exibir informações sobre filmes, incluindo detalhes como título, sinopse, elenco e avaliações. O projeto foi desenvolvido para explorar a integração com APIs REST e criar uma interface interativa para os usuários.',
     image: 'src/assets/projects/tmdb.png',
+    imageOverlay: 'https://i.imgur.com/9hWquBD.gif',
     url: 'https://tmdb-movie-ashen.vercel.app',
     category: ['React', 'JavaScript', 'TailwindCSS', 'Css', 'Html'],
     year: '2025',

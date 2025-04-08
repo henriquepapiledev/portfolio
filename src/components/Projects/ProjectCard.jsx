@@ -9,11 +9,13 @@ const ProjectCard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const openModal = (project) => {
+    document.querySelector('body').style.overflow = 'hidden';
     setSelectedProject(project);
     setIsOpen(true);
   };
 
   const closeModal = () => {
+    document.querySelector('body').style.overflow = 'auto';
     setIsOpen(false);
     setSelectedProject(null);
   };
@@ -44,7 +46,7 @@ const ProjectCard = () => {
                     <img
                       className="w-full object-cover group-hover:scale-[1.015] transition duration-300 rounded-2xl shadow-lg"
                       src={project.image}
-                      alt=""
+                      alt={project.title}
                     />
                   </div>
                 </span>
@@ -74,9 +76,9 @@ const ProjectCard = () => {
           selectedProject={selectedProject}
           title={selectedProject.title}
           description={selectedProject.description}
-          image={selectedProject.image}
           type={selectedProject.type}
           year={selectedProject.year}
+          imageOverlay={selectedProject.imageOverlay}
           onClick={closeModal}
         />
       )}

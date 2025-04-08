@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
 import Arrow from '../../assets/icon-arrow.svg?react';
-import ArrowLeft from '../../assets/icon-arrow-left.svg?react';
+import Close from '../../assets/icon-close.svg?react';
 
 const ProjectModal = ({
   title,
   description,
-  image,
+  imageOverlay,
   type,
   year,
   selectedProject,
@@ -16,7 +16,7 @@ const ProjectModal = ({
   };
   return (
     <div
-      className="fixed top-0 left-0 w-full h-full bg-black/50 backdrop-blur-md flex items-center justify-center px-4 z-50"
+      className="fixed top-0 left-0 w-full h-full bg-black/50 backdrop-blur-md flex items-center justify-center px-4 z-[100]"
       id="modal"
       onClick={handleModalClick}
     >
@@ -33,82 +33,41 @@ const ProjectModal = ({
           filter: 'blur(5px)',
           transition: { ease: 'easeIn', duration: 0.22 },
         }}
-        className="bg-primary-bg w-[60rem] rounded-2xl p-6"
+        className="bg-primary-bg w-[50rem] rounded-2xl border-4 border-secondary"
       >
-        <motion.div
-          initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
-          whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
-          transition={{
-            delay: 0.1,
-            duration: 0.5,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-          viewport={{ once: true }}
-          className="flex justify-between items-center"
-        >
+        <header className="relative flex flex-wrap justify-between items-center border-b-[1.5px] border-grey/30 gap-3 px-8 py-6">
           <button
-            className="flex items-center font-normal text-sm text-secondary hover:opacity-50 transition-opacity duration-300 ease-out cursor-pointer gap-2"
+            className="absolute top-0 right-0 filter cursor-pointer hover:opacity-50 transition-opacity duration-300 ease-out p-2"
             onClick={onClick}
           >
-            <ArrowLeft />
-            Voltar para os projetos
+            <Close />
           </button>
-          <p className="inline-flex items-center w-fit min-w-fit font-normal text-sm text-secondary px-2 py-1 gap-2 border border-secondary/45 rounded-sm">
-            {selectedProject.year}
-          </p>
-        </motion.div>
-
-        <div className="h-[50vh] lg:h-auto overflow-y-scroll lg:overflow-y-hidden">
-          <header className="flex flex-col gap-4 mt-4">
-            <motion.div
-              initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
-              whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.2,
-                duration: 0.5,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              viewport={{ once: true }}
-              className="flex flex-wrap justify-between gap-4 md:items-end"
-            >
-              <h2 className="text-3xl text-primary font-extrabold">{title}</h2>
-              <a
-                className="flex items-center font-normal text-sm text-secondary hover:opacity-50 transition-opacity duration-300 ease-out gap-2"
-                href={selectedProject.url}
-                target="_blank"
-              >
-                Visualizar <Arrow />
-              </a>
-            </motion.div>
-            <motion.div
-              initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
-              whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.3,
-                duration: 0.5,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              viewport={{ once: true }}
-              className="flex flex-col sm:flex-row items-start gap-4"
-            >
+          <h2 className="font-extrabold text-2xl text-primary">{title}</h2>
+          <a
+            className="flex items-center font-normal text-sm text-white bg-black hover:opacity-50 transition-opacity duration-300 ease-out gap-2 rounded-full px-4 py-2.5"
+            href={selectedProject.url}
+            target="_blank"
+          >
+            Visualizar Site
+            <Arrow />
+          </a>
+        </header>
+        <div className="max-h-[50vh] lg:max-h-max overflow-y-scroll lg:overflow-y-auto">
+          <div className="flex flex-col gap-4 px-8 py-6">
+            <div className="flex flex-wrap justify-between gap-3">
               <p className="font-extralight text-base text-secondary w-full sm:w-[80%]">
                 {description}
               </p>
-              <p className="font-extralight text-base text-secondary">
-                <span className="font-bold">Cliente:</span> {type}
-              </p>
-            </motion.div>
-
-            <motion.div
-              initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
-              whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
-              transition={{
-                delay: 0.4,
-                duration: 0.5,
-                ease: [0.25, 0.1, 0.25, 1],
-              }}
-              viewport={{ once: true }}
-            >
+              <div className="flex flex-row lg:flex-col justify-between w-full lg:w-auto">
+                <p className="font-extralight text-base text-secondary">
+                  <span className="font-bold">Cliente:</span> {type}
+                </p>
+                <p className="font-extralight text-base text-secondary">
+                  <span className="font-bold">Ano:</span> {year}
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-between items-center gap-3">
               <ul className="flex flex-wrap gap-2">
                 {selectedProject.category.map((item) => (
                   <li
@@ -119,21 +78,15 @@ const ProjectModal = ({
                   </li>
                 ))}
               </ul>
-            </motion.div>
-          </header>
-          <motion.div
-            initial={{ filter: 'blur(10px)', opacity: 0, y: 20 }}
-            whileInView={{ filter: 'blur(0)', opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.5,
-              duration: 0.5,
-              ease: [0.25, 0.1, 0.25, 1],
-            }}
-            viewport={{ once: true }}
-            className="mt-8"
-          >
-            <img className="w-full h-auto rounded-lg" src={image} alt={title} />
-          </motion.div>
+            </div>
+          </div>
+          <div className="border-t-[1.5px] border-grey/30 px-8 py-6">
+            <img
+              className="w-full h-auto rounded-lg aspect-video"
+              src={imageOverlay}
+              alt={title}
+            />
+          </div>
         </div>
       </motion.div>
     </div>

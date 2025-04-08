@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 @import 'tailwindcss';
 
 * {
@@ -10,6 +9,8 @@
   /* text */
   --color-primary: #0a0a0a;
   --color-secondary: #a9a9bd;
+  --color-black: #000000;
+  --color-white: #ffffff;
 
   /* color */
   --color-grey: #808080;
@@ -27,13 +28,11 @@
 [data-theme='dark'] {
   --color-primary-bg: #121212;
   --color-primary: #ffffff;
+  --color-black: #ffffff;
+  --color-white: #000000;
   --color-btn-bg: #191920;
   --color-grey-bg: #191920;
   --color-primary-bg-opacity: rgb(11 11 13 / 80%);
-}
-
-.font-DotGothic16 {
-  font-family: 'DotGothic16', sans-serif !important;
 }
 
 .App:after,
@@ -66,6 +65,11 @@
   opacity: 0.5;
 }
 
+/* filter brightness */
+[data-theme='dark'] .filter {
+  filter: contrast(0) brightness(2);
+}
+
 /* scroll bar */
 ::-webkit-scrollbar {
   height: 12px;
@@ -84,10 +88,10 @@
 }
 
 /* selection */
-/* ::-moz-selection {
+::-moz-selection {
   color: var(--color-white);
   background: var(--color-secondary);
-} */
+}
 
 ::selection {
   color: var(--color-white);

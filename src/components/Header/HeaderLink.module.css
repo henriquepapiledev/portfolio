@@ -15,10 +15,6 @@
   width: 16px;
 }
 
-[data-theme='dark'] .link {
-  filter: contrast(0) brightness(2);
-}
-
 @media (max-width: 62rem) {
   .link::after {
     display: none;

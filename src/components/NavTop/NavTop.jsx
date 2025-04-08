@@ -29,7 +29,7 @@ const NavTop = () => {
       offset={-80}
       className={`${
         visible ? styles.visible : styles.invisible
-      } fixed bottom-[88px] sm:bottom-4 right-4 z-50 flex justify-center items-center bg-white hover:bg-grey-bg w-11 h-11 transition duration-300 ease-out active:scale-[0.9] border border-grey/30 cursor-pointer shadow rounded-full`}
+      } fixed bottom-[88px] lg:bottom-4 right-4 z-50 flex justify-center items-center bg-white hover:bg-grey-bg w-11 h-11 transition duration-300 ease-out active:scale-[0.9] border border-grey/30 cursor-pointer shadow rounded-full`}
     >
       <Arrow />
     </Link>

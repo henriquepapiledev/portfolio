@@ -15,7 +15,7 @@ const AboutMarqueeItem = ({ images }) => {
               className="flex items-center bg-btn-bg px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
               key={id}
             >
-              <img className="w-5 h-5" src={icon} />
+              <img className="w-5 h-5" src={icon} alt={desc} />
               <span className="font-normal text-sm text-primary">{desc}</span>
             </div>
           ))}
@@ -31,7 +31,7 @@ const AboutMarqueeItem = ({ images }) => {
               className="flex items-center bg-btn-bg px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
               key={id}
             >
-              <img className="w-5 h-5" src={icon} />
+              <img className="w-5 h-5" src={icon} alt={desc} />
               <span className="font-normal text-sm text-primary">{desc}</span>
             </div>
           ))}
@@ -47,7 +47,7 @@ const AboutMarqueeItem = ({ images }) => {
               className="flex items-center bg-btn-bg px-4 py-2 w-fit min-w-fit gap-2 rounded-full"
               key={id}
             >
-              <img className="w-5 h-5" src={icon} />
+              <img className="w-5 h-5" src={icon} alt={desc} />
               <span className="font-normal text-sm text-primary">{desc}</span>
             </div>
           ))}
