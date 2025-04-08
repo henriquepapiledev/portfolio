@@ -1,8 +1,8 @@
-import trisul from '../assets/projects/trisul.png';
-import vamos from '../assets/projects/vamos.png';
-import promatre from '../assets/projects/promatre.png';
-import dogs from '../assets/projects/rede-social-dogs.png';
-import tmdb from '../assets/projects/tmdb.png';
+import trisul from '../assets/projects/trisul.webp';
+import vamos from '../assets/projects/vamos.webp';
+import promatre from '../assets/projects/promatre.webp';
+import dogs from '../assets/projects/rede-social-dogs.webp';
+import tmdb from '../assets/projects/tmdb.webp';
 
 const data = [
   {

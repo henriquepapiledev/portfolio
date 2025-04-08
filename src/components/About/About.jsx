@@ -1,6 +1,6 @@
 import AboutLinks from './AboutLinks';
 import AboutList from './AboutList';
-import image from '../../assets/photo.png';
+import image from '../../assets/photo.webp';
 import AboutMarquee from './AboutMarquee';
 import { motion } from 'framer-motion';
 
