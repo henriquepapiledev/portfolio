@@ -27,4 +27,4 @@
 </ul>
 
 <br />
-Deploy: <a href="https://henriquepapiledev.github.io" target="_blank">Clique aqui</a><br />
+Site: <a href="https://henriquepapile.com.br" target="_blank">Clique aqui</a><br />
