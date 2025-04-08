@@ -20,8 +20,8 @@ const AboutMarquee = () => {
     { id: 6, icon: iconAngular, desc: 'Angular' },
     { id: 7, icon: iconNodejs, desc: 'Node.js' },
     { id: 8, icon: iconFramerMotion, desc: 'Framer Motion' },
-    { id: 8, icon: iconFigma, desc: 'Figma' },
-    { id: 8, icon: iconGit, desc: 'Git' },
+    { id: 9, icon: iconFigma, desc: 'Figma' },
+    { id: 10, icon: iconGit, desc: 'Git' },
   ];
 
   return (
