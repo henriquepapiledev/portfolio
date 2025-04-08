@@ -1,5 +1,3 @@
-import React from 'react';
-
 const AboutList = ({ title, experiences }) => {
   return (
     <div className="h-full p-4 pl-5 pr-5 border-[1.5px] border-secondary/30 rounded-md">
