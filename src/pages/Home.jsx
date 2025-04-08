@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <>
       <section className="h-dvh border-b-[1.5px] border-grey/30" id="home">
-        <div className="container mx-auto max-w-7xl flex flex-col justify-center items-center h-full pl-4 pr-4">
+        <div className="container relative mx-auto max-w-7xl flex flex-col justify-center items-center h-full pl-4 pr-4">
           <BlurRevealText
             Wrapper="h1"
             className="font-bold text-3xl lg:text-5xl text-primary text-center mb-2"
