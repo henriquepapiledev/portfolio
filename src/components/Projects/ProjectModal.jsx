@@ -58,7 +58,7 @@ const ProjectModal = ({
               <p className="font-extralight text-base text-secondary w-full sm:w-[80%]">
                 {description}
               </p>
-              <div className="flex flex-row lg:flex-col justify-between w-full lg:w-auto">
+              <div className="flex flex-row lg:flex-col justify-between lg:justify-start w-full lg:w-auto">
                 <p className="font-extralight text-base text-secondary">
                   <span className="font-bold">Cliente:</span> {type}
                 </p>
