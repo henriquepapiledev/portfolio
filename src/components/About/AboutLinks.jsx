@@ -1,4 +1,5 @@
 import { about } from '../../data/about';
+import styles from '../About/AboutLinks.module.css';
 
 const AboutLinks = () => {
   return (
@@ -15,7 +16,11 @@ const AboutLinks = () => {
               className="flex items-center text-sm text-primary gap-2"
             >
               {title}
-              <img className="w-4 h-4" src={img} alt={title} />
+              <img
+                className={`${styles.image} w-4 h-4`}
+                src={img}
+                alt={title}
+              />
             </a>
           </li>
         ))}
