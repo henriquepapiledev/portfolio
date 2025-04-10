@@ -8,7 +8,7 @@
 @theme {
   /* text */
   --color-primary: #0a0a0a;
-  --color-secondary: #a9a9bd;
+  --color-secondary: #3d3d3d;
   --color-black: #000000;
   --color-white: #ffffff;
 
@@ -29,6 +29,7 @@
   --color-primary-bg: #121212;
   --color-primary: #ffffff;
   --color-black: #ffffff;
+  --color-secondary: #e6e3e3;
   --color-white: #000000;
   --color-btn-bg: #191920;
   --color-grey-bg: #191920;
